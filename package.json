@@ -1,7 +1,7 @@
 {
   "name": "etherwallet",
   "version": "1.0.0",
-  "description": "",
+  "description": "This smart contract allows users to deposit, send, and check balance of their token in their wallet",
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {},
@@ -9,5 +9,17 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sam-Devs/Transaction-Wallet.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/Sam-Devs/Transaction-Wallet/issues"
+  },
+  "homepage": "https://github.com/Sam-Devs/Transaction-Wallet#readme"
 }
