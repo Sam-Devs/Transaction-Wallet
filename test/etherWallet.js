@@ -34,7 +34,7 @@ contract('EtherWallet', (accounts) => {
     assert(finalBalance.sub(initialBalance).toNumber() === 50);
   });
 
-  it('Should NOT transfer ether if tx not sent from owner', async () => {
+  it('Should NOT transfer ether if transaction not sent from owner', async () => {
     try {
       await etherWallet.sendEther(accounts[1], 50, {from: accounts[1]});
     } catch(e) {
