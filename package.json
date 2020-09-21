@@ -3,8 +3,16 @@
   "version": "1.0.0",
   "description": "This smart contract allows users to deposit, send, and check balance of their token in their wallet",
   "main": "index.js",
-  "dependencies": {},
-  "devDependencies": {},
+  "devDependencies": {
+    "@truffle/hdwallet-provider": "1.0.42",
+    "web3": "^1.2.11",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.2",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -13,6 +21,7 @@
   "directories": {
     "test": "test"
   },
+  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Sam-Devs/Transaction-Wallet.git"

@@ -18,7 +18,15 @@
  *
  */
 
-// const HDWalletProvider = require('@truffle/hdwallet-provider');
+require("dotenv").config();
+
+const infura_network = process.env.INFURA_NETWORK;
+const mnemoric = process.env.MNEMONIC;
+console.log(mnemoric);
+const networkId = process.env.NETWORK_ID;
+
+
+const HDWalletProvider = require('@truffle/hdwallet-provider');
 // const infuraKey = "fj4jll3k.....";
 //
 // const fs = require('fs');
@@ -34,6 +42,7 @@ module.exports = {
    *
    * $ truffle test --network <network-name>
    */
+  // require('dotenv').config({path:__dirname+'..'});
 
   networks: {
     // Useful for testing. The `development` name is special - truffle uses it by default
@@ -60,14 +69,14 @@ module.exports = {
 
     // Useful for deploying to a public network.
     // NB: It's important to wrap the provider as a function.
-    // ropsten: {
-      // provider: () => new HDWalletProvider(mnemonic, `https://ropsten.infura.io/v3/YOUR-PROJECT-ID`),
-      // network_id: 3,       // Ropsten's id
-      // gas: 5500000,        // Ropsten has a lower block limit than mainnet
+    ropsten: {
+      provider: () => new HDWalletProvider(mnemonic, infura_network),
+      network_id: 3,       // Ropsten's id
+      gas: 5500000,        // Ropsten has a lower block limit than mainnet
       // confirmations: 2,    // # of confs to wait between deployments. (default: 0)
       // timeoutBlocks: 200,  // # of blocks before a deployment times out  (minimum/default: 50)
       // skipDryRun: true     // Skip dry run before migrations? (default: false for public nets )
-    // },
+    },
 
     // Useful for private networks
     // private: {
